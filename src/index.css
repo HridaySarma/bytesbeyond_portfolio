@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-primary {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6;
+  }
+  
+  .heading-secondary {
+    @apply text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Custom Carousel Styles */
+.project-carousel .slick-dots {
+  @apply bottom-4;
+}
+
+.project-carousel .slick-dots li {
+  @apply mx-1;
+}
+
+.project-carousel .slick-dots li button {
+  @apply before:hidden;
+}
+
+.project-carousel .slick-dots li.slick-active div {
+  @apply bg-blue-500;
+}
+
+.project-carousel .slick-slide {
+  @apply outline-none;
+}
+
+.project-carousel .slick-arrow {
+  @apply opacity-0 transition-opacity duration-200;
+}
+
+.project-carousel:hover .slick-arrow {
+  @apply opacity-100;
+}
+
+.project-carousel .slick-arrow.slick-disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
