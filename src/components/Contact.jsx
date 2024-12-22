@@ -28,7 +28,7 @@ const Contact = () => {
             Ready to start your project? Contact us today and let's discuss how we can help.
           </motion.p>
           <p className="text-gray-600 dark:text-gray-300 mb-8">
-            Let&apos;s collaborate to bring your ideas to life. Whether you&apos;re looking to start a new project or enhance an existing one, we&apos;re here to help.
+            Let's collaborate to bring your ideas to life. Whether you're looking to start a new project or enhance an existing one, we're here to help.
           </p>
         </div>
 

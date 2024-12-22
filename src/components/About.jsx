@@ -64,7 +64,7 @@ const About = () => {
               Founded with a vision to transform businesses through technology, BytesBeyond has grown into a trusted partner for companies seeking innovative software solutions. Our journey is marked by continuous learning, adaptation, and a commitment to excellence.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              Today, we pride ourselves on our ability to tackle complex challenges and deliver solutions that drive real business value. Our team combines technical expertise with creative problem-solving to ensure every project's success.
+              Today, we pride ourselves on our ability to tackle complex challenges and deliver solutions that drive real business value. Our team combines technical expertise with creative problem-solving to ensure every project&apos;s success.
             </p>
           </motion.div>
 
