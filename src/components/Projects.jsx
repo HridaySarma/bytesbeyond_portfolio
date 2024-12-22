@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectModal from './ProjectModal';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -188,10 +189,13 @@ const Projects = () => {
               onClick={() => handleProjectClick(project)}
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={project.thumbnail}
                   alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover rounded-t-lg transform transition-transform duration-300 group-hover:scale-105"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

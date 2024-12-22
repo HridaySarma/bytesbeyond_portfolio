@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -61,10 +62,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     {project.images.map((image, index) => (
                       <div key={index} className="outline-none">
                         <div className="aspect-video relative">
-                          <img
+                          <Image
                             src={image}
                             alt={`${project.title} - Image ${index + 1}`}
-                            className="w-full h-full object-cover"
+                            width={800}
+                            height={450}
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            priority
                           />
                         </div>
                       </div>
