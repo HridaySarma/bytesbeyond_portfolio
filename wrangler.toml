@@ -1,7 +1,10 @@
 name = "portfolio"
 compatibility_date = "2024-12-22"
 compatibility_flags = ["nodejs_compat"]
-main = "workers-site/index.js"
+
+[build]
+command = "npm run build"
+dist = ".next"
 
 [site]
-bucket = "./dist"
+bucket = ".vercel/output/static"

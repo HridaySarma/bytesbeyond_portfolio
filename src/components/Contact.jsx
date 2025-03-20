@@ -43,7 +43,7 @@ const Contact = () => {
               <EnvelopeIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Email</h3>
-            <p className="text-gray-600 dark:text-gray-300">contact@bytesbeyond.com</p>
+            <p className="text-gray-600 dark:text-gray-300">support@bytesbeyond.in</p>
           </motion.div>
 
           <motion.div
@@ -57,7 +57,7 @@ const Contact = () => {
               <PhoneIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Phone</h3>
-            <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+            <p className="text-gray-600 dark:text-gray-300">+91 6000280524</p>
           </motion.div>
 
           <motion.div
@@ -71,7 +71,7 @@ const Contact = () => {
               <MapPinIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Location</h3>
-            <p className="text-gray-600 dark:text-gray-300">Silicon Valley, CA</p>
+            <p className="text-gray-600 dark:text-gray-300">Guwahati, Assam</p>
           </motion.div>
         </div>
 
