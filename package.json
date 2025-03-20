@@ -16,7 +16,8 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.1",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
     "framer-motion": "^10.17.4",
     "next": "latest",
     "react": "^18.2.0",

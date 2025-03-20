@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline';
+import LegalModal from './LegalModal';
 
 const Contact = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState('terms');
+
+  const openModal = (type) => {
+    setModalType(type);
+    setModalOpen(true);
+  };
+
   return (
     <section id="contact" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
@@ -139,7 +149,32 @@ const Contact = () => {
             </button>
           </form>
         </motion.div>
+
+        <div className="mt-16 text-center text-sm text-gray-500 dark:text-gray-400">
+          <p>By using our services, you agree to our</p>
+          <div className="flex justify-center gap-4 mt-2">
+            <button 
+              onClick={() => openModal('terms')}
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Terms & Conditions
+            </button>
+            <span>|</span>
+            <button 
+              onClick={() => openModal('privacy')}
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Privacy Policy
+            </button>
+          </div>
+        </div>
       </div>
+
+      <LegalModal 
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        type={modalType}
+      />
     </section>
   );
 };

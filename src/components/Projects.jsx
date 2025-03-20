@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectModal from './ProjectModal';
 import Image from 'next/image';
+import LegalModal from './LegalModal';
 
 const projects = [
   {
@@ -55,8 +56,16 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState('terms');
+
   const handleProjectClick = (projectUrl) => {
     window.open(projectUrl, '_blank');
+  };
+
+  const openModal = (type) => {
+    setModalType(type);
+    setModalOpen(true);
   };
 
   return (
@@ -129,30 +138,32 @@ const Projects = () => {
           ))}
         </div>
         
-        {/* Terms and Privacy Policy Links */}
+        {/* Update the Terms and Privacy Policy Links */}
         <div className="mt-16 text-center text-sm text-gray-500 dark:text-gray-400">
           <p>By using our services, you agree to our</p>
           <div className="flex justify-center gap-4 mt-2">
-            <a 
-              href="/terms" 
+            <button 
+              onClick={() => openModal('terms')}
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Terms & Conditions
-            </a>
+            </button>
             <span>|</span>
-            <a 
-              href="/privacy" 
+            <button 
+              onClick={() => openModal('privacy')}
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Privacy Policy
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalModal 
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        type={modalType}
+      />
     </section>
   );
 };
